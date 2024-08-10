@@ -59,7 +59,7 @@ Here are the languages I love to work with:
 
 <p align="center">
   <a href="https://discordapp.com/users/868918512847044608">
-    <img src="https://img.shields.io/badge/Discord-868918512847044608-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord Contact"/>
+    <img src="https://i.imgur.com/oO6U3SC.png" alt="Contact me on Discord" width="400"/>
   </a>
 </p>
 
