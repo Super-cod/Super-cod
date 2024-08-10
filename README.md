@@ -57,8 +57,11 @@ Here are the languages I love to work with:
 
 ## 📫 Contact Me
 
-Feel free to reach out to me on Discord:
-- **Discord**: [868918512847044608](https://discordapp.com/users/868918512847044608)
+<p align="center">
+  <a href="https://discordapp.com/users/868918512847044608">
+    <img src="https://img.shields.io/badge/Discord-868918512847044608-blue?style=for-the-badge&logo=discord" alt="Discord Contact"/>
+  </a>
+</p>
 
 ---
 
