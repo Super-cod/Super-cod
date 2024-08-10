@@ -43,14 +43,6 @@ Here are the languages I love to work with:
   </tr>
 </table>
 
-## 🌟 Featured Projects
-
-Here are some of my favorite projects:
-
-- [**Project 1**](https://github.com/Super-cod/project1) - A brief description of what this project does and why it’s interesting.
-- [**Project 2**](https://github.com/Super-cod/project2) - A brief description of what this project does and why it’s interesting.
-- [**Project 3**](https://github.com/Super-cod/project3) - A brief description of what this project does and why it’s interesting.
-
 ## 🏆 Achievements
 
 <p align="center">
@@ -59,19 +51,19 @@ Here are some of my favorite projects:
   </a>
 </p>
 
+## ✨ Stats
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Super-cod&show_icons=true&count_private=true&hide_title=true&hide=prs&hide_rank=true" alt="GitHub Stats"/>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Super-cod&hide_title=true&hide_border=true" alt="GitHub Streak"/>
+</p>
+
 ## 📫 Contact Me
 
 <p align="center">
   <a href="https://discordapp.com/users/868918512847044608">
     <img src="https://img.shields.io/badge/Contact%20Me%20on%20Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord Contact"/>
   </a>
-</p>
-
-## ✨ Stats
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Super-cod&show_icons=true&count_private=true&hide_title=true&hide=prs&hide_rank=true" alt="GitHub Stats"/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Super-cod&hide_title=true&hide_border=true" alt="GitHub Streak"/>
 </p>
 
 ---
