@@ -1,71 +1,104 @@
-# 👋 Hi, I’m @Super-cod!
+# 👋 Hi, I'm @Super-cod!
 
-Welcome to my GitHub profile! I'm excited to share my journey in the world of coding and technology with you.
+Welcome to my GitHub profile! I'm passionate about coding, problem-solving, and building innovative solutions that make a difference.
 
 ## 🌟 About Me
 
-- **🤓 Interests**: Exploring the endless possibilities of coding and tech.
-- **🌱 Learning**: Continuously expanding my skills by learning new languages and frameworks.
-- **💡 Collaboration**: Looking to collaborate on exciting open-source projects that make a difference.
-- **🧩 Passion**: Solving complex problems and building innovative solutions.
-- **🚀 Exploration**: Always staying ahead of the curve by exploring the latest in technology.
+- **🚀 Currently:** Building AI-powered healthcare solutions
+- **🌱 Learning:** Advanced Machine Learning, Cloud Architecture, and System Design
+- **💡 Interests:** AI/ML, Full-Stack Development, Open Source
+- **🤝 Looking for:** Exciting collaborations on impactful projects
+- **⚡ Fun fact:** I love solving competitive programming challenges
 
-## 💻 Programming Languages
-
-Here are the languages I love to work with:
+## 💻 Tech Stack
 
 <table>
   <tr>
-    <td align="center" width="100">
-      <img src="https://img.icons8.com/color/96/000000/java-coffee-cup-logo.png" alt="Java" width="50"/>
-      <br>Java
-    </td>
-    <td align="center" width="100">
-      <img src="https://img.icons8.com/color/96/000000/python.png" alt="Python" width="50"/>
+    <td align="center" width="96">
+      <img src="https://techstack-generator.vercel.app/python-icon.svg" alt="Python" width="65" height="65">
       <br>Python
     </td>
-    <td align="center" width="100">
-      <img src="https://img.icons8.com/color/96/000000/c-plus-plus-logo.png" alt="C++" width="50"/>
+    <td align="center" width="96">
+      <img src="https://techstack-generator.vercel.app/js-icon.svg" alt="JavaScript" width="65" height="65">
+      <br>JavaScript
+    </td>
+    <td align="center" width="96">
+      <img src="https://techstack-generator.vercel.app/cpp-icon.svg" alt="C++" width="65" height="65">
       <br>C++
     </td>
-    <td align="center" width="100">
-      <img src="https://img.icons8.com/color/96/000000/c.png" alt="C" width="50"/>
-      <br>C
+    <td align="center" width="96">
+      <img src="https://techstack-generator.vercel.app/mysql-icon.svg" alt="MySQL" width="65" height="65">
+      <br>MySQL
     </td>
-    <td align="center" width="100">
-      <img src="https://img.icons8.com/color/96/000000/html-5.png" alt="HTML" width="50"/>
-      <br>HTML
+    <td align="center" width="96">
+      <img src="https://techstack-generator.vercel.app/aws-icon.svg" alt="AWS" width="65" height="65">
+      <br>AWS
     </td>
-    <td align="center" width="100">
-      <img src="https://img.icons8.com/color/96/000000/css3.png" alt="CSS" width="50"/>
-      <br>CSS
+    <td align="center" width="96">
+      <img src="https://techstack-generator.vercel.app/docker-icon.svg" alt="Docker" width="65" height="65">
+      <br>Docker
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=tensorflow" width="48" height="48" alt="TensorFlow"/>
+      <br>TensorFlow
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=react" width="48" height="48" alt="React"/>
+      <br>React
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=nodejs" width="48" height="48" alt="NodeJS"/>
+      <br>NodeJS
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=flask" width="48" height="48" alt="Flask"/>
+      <br>Flask
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=mongodb" width="48" height="48" alt="MongoDB"/>
+      <br>MongoDB
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=git" width="48" height="48" alt="Git"/>
+      <br>Git
     </td>
   </tr>
 </table>
 
-## 🏆 Achievements
+## 📊 GitHub Stats
 
 <p align="center">
-  <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <img src="https://github-profile-trophy.vercel.app/?username=Super-cod" alt="Trophy"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=Super-cod&show_icons=true&theme=gotham" alt="GitHub Stats" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Super-cod&theme=gotham" alt="GitHub Streak"/>
+</p>
+
+## 🏆 GitHub Trophies
+
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=Super-cod&theme=darkhub&no-frame=true&row=1&column=7" alt="Trophies" />
+</p>
+
+## 🤝 Connect With Me
+
+<p align="center">
+  <a href="https://linkedin.com/in/your-linkedin">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
   </a>
-</p>
-
-## ✨ Stats
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Super-cod&show_icons=true&count_private=true&hide_title=true&hide=prs&hide_rank=true" alt="GitHub Stats"/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Super-cod&hide_title=true&hide_border=true" alt="GitHub Streak"/>
-</p>
-
-## 📫 Contact Me
-
-<p align="center">
+  <a href="https://twitter.com/your-twitter">
+    <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter"/>
+  </a>
   <a href="https://discordapp.com/users/868918512847044608">
-    <img src="https://img.shields.io/badge/Contact%20Me%20on%20Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord Contact"/>
+    <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"/>
   </a>
 </p>
 
 ---
 
-**Super-cod/Super-cod** is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile. You can click the Preview link to take a look at your changes.
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=Super-cod&color=brightgreen" alt="Profile Views"/>
+</p>
