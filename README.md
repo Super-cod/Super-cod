@@ -67,21 +67,6 @@ Welcome to my GitHub profile! I'm passionate about coding, problem-solving, and 
   </tr>
 </table>
 
-## 📊 GitHub Stats
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Super-cod&show_icons=true&theme=gotham" alt="GitHub Stats" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Super-cod&theme=gotham" alt="GitHub Streak"/>
-</p>
-
-## 🏆 GitHub Trophies
-
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=Super-cod&theme=darkhub&no-frame=true&row=1&column=7" alt="Trophies" />
-</p>
 
 ## 🤝 Connect With Me
 
