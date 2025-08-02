@@ -11,7 +11,6 @@ Welcome to my GitHub profile! I'm passionate about coding, problem-solving, and 
 - **⚡ Fun fact:** I love solving competitive programming challenges
 
 ## 💻 Tech Stack
-
 <table>
   <tr>
     <td align="center" width="96">
@@ -31,38 +30,30 @@ Welcome to my GitHub profile! I'm passionate about coding, problem-solving, and 
       <br>MySQL
     </td>
     <td align="center" width="96">
-      <img src="https://techstack-generator.vercel.app/aws-icon.svg" alt="AWS" width="65" height="65">
-      <br>AWS
-    </td>
-    <td align="center" width="96">
       <img src="https://techstack-generator.vercel.app/docker-icon.svg" alt="Docker" width="65" height="65">
       <br>Docker
     </td>
   </tr>
   <tr>
     <td align="center" width="96">
-      <img src="https://skillicons.dev/icons?i=tensorflow" width="48" height="48" alt="TensorFlow"/>
-      <br>TensorFlow
+      <img src="https://skillicons.dev/icons?i=typescript" width="48" height="48" alt="TypeScript"/>
+      <br>TypeScript
     </td>
     <td align="center" width="96">
       <img src="https://skillicons.dev/icons?i=react" width="48" height="48" alt="React"/>
       <br>React
     </td>
     <td align="center" width="96">
-      <img src="https://skillicons.dev/icons?i=nodejs" width="48" height="48" alt="NodeJS"/>
-      <br>NodeJS
-    </td>
-    <td align="center" width="96">
       <img src="https://skillicons.dev/icons?i=flask" width="48" height="48" alt="Flask"/>
       <br>Flask
     </td>
     <td align="center" width="96">
-      <img src="https://skillicons.dev/icons?i=mongodb" width="48" height="48" alt="MongoDB"/>
-      <br>MongoDB
-    </td>
-    <td align="center" width="96">
       <img src="https://skillicons.dev/icons?i=git" width="48" height="48" alt="Git"/>
       <br>Git
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=pytorch" width="48" height="48" alt="PyTorch"/>
+      <br>PyTorch
     </td>
   </tr>
 </table>
