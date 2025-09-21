@@ -22,7 +22,7 @@
 - 🔥 Obsessively building AI that probably doesn't need to exist but hey, it's cool
 - 🌙 3 AM warrior - because that's when the best code happens (fight me!)
 - 🍕 Debugging with pizza methodology - if it's broken, add more cheese
-- 🚀 Living proof that Google, Stack Overflow, and sheer stubbornness can take you anywhere
+- 🚀 Living proof that Chatgpt,Google, Stack Overflow, and sheer stubbornness can take you anywhere
 
 **🎯 Random Developer Facts About Me:**
 ```bash
@@ -141,7 +141,11 @@
 
 <br>
 
-<img src="https://ghchart.rshah.org/00D4AA/Super-cod" alt="GitHub Contribution Heatmap" width="100%"/>
+![GitHub Activity Heatmap](https://github.com/Super-cod/Super-cod/blob/output/github-contribution-grid-snake.svg)
+
+<br>
+
+### 🏆 Achievement Unlocked!" width="100%"/>
 
 <br>
 
