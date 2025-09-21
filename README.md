@@ -141,7 +141,7 @@
 
 <br>
 
-![GitHub Activity Heatmap](https://github.com/Super-cod/Super-cod/blob/output/github-contribution-grid-snake.svg)
+
 
 <br>
 
