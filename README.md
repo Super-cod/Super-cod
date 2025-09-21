@@ -141,6 +141,10 @@
 
 <br>
 
+<img src="https://ghchart.rshah.org/00D4AA/Super-cod" alt="GitHub Contribution Heatmap" width="100%"/>
+
+<br>
+
 ### 🏆 Achievement Unlocked!
 
 <img src="https://github-profile-trophy.vercel.app/?username=Super-cod&theme=algolia&no-frame=false&no-bg=false&margin-w=4" alt="GitHub Trophies"/>
