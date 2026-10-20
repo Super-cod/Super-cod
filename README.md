@@ -16,12 +16,12 @@ Open to internships and entry-level roles in systems, compilers, GPU and ML engi
 ### [ptx-toy-compiler](https://github.com/Super-cod/ptx-toy-compiler)
 `C++20` `Compilers` `IR` `PTX`
 
-An educational compiler written in modern C++: recursive-descent parser, typed AST, three-address-code IR, optimization passes (constant folding, dead code elimination) and a backend that generates NVIDIA PTX.
+An educational compiler written in modern C++: recursive-descent parser, typed AST, three-address-code IR, optimization passes (constant folding, dead code elimination) and a backend that generates NVIDIA PTX. 12 passing tests.
 
 ### [cuda-kernel-perf-lab](https://github.com/Super-cod/cuda-kernel-perf-lab)
 `PTX` `CUDA Driver API` `Python` `GPU performance`
 
-Hand-written PTX kernels loaded through the CUDA Driver API and measured on an RTX 3050 laptop GPU. Covers memory coalescing, shared-memory tiling for GEMM and warp divergence, with results checked against CPU references.
+Hand-written PTX kernels loaded through the CUDA Driver API and measured on an RTX 3050 laptop GPU. Covers memory coalescing, shared-memory tiling for GEMM and warp divergence, with results checked against CPU references. Measured: strided vs coalesced copy about **11x**, divergent vs uniform warps about **2x**, tiled vs naive GEMM about **1.4x**, against a cuBLAS reference about 4x faster than the tiled kernel.
 
 ### [Multimodal Vision-Language Model from scratch](https://github.com/Super-cod/-Multimodal-Vision-Language-Model-from-scratch-in-PyTorch)
 `PyTorch` `ViT` `Multimodal`
@@ -45,13 +45,25 @@ A web app that pulls a GitHub pull request, indexes the code and produces a stru
 
 ---
 
+## Systems labs
+
+Small, dependency-free C++20 labs with measured results:
+
+| Repo | What it shows |
+| :--- | :--- |
+| [cpp-arch-perf-lab](https://github.com/Super-cod/cpp-arch-perf-lab) | Cache locality (row- vs column-major, **7.4x**), struct padding (**1.6x**), AVX2/FMA SIMD, cache coherence, branch prediction, CPUID introspection |
+| [toolchain-linker-lab](https://github.com/Super-cod/toolchain-linker-lab) | Preprocess/compile/assemble/link stages, symbol resolution, linker errors, relocations, DWARF debug info |
+| [bin-symbol-explorer](https://github.com/Super-cod/bin-symbol-explorer) | ELF64 and PE/COFF inspector: headers, sections, symbols, relocations |
+
+---
+
 ## More work
 
 | Area | Projects |
 | :--- | :--- |
-| **Deep learning / vision** | [Swin-Transformers](https://github.com/Super-cod/Swin-Transformers) · [VISiOn_transformer](https://github.com/Super-cod/VISiOn_transformer) · [PLANT_DISEASE_BASED_DL_MODEL](https://github.com/Super-cod/PLANT_DISEASE_BASED_DL_MODEL) · [posture_detection_system_ai_project](https://github.com/Super-cod/posture_detection_system_ai_project) · [Drone_tarcking](https://github.com/Super-cod/Drone_tarcking) · [HCI_gaze](https://github.com/Super-cod/HCI_gaze) |
-| **Applied ML** | [customer-churn](https://github.com/Super-cod/customer-churn) · [Fraud_Bockchain_transaction](https://github.com/Super-cod/Fraud_Bockchain_transaction) · [car_price_ml_model](https://github.com/Super-cod/car_price_ml_model) · [Heart_guard](https://github.com/Super-cod/Heart_guard) · [reinforsment_snake_game](https://github.com/Super-cod/reinforsment_snake_game) |
-| **Full-stack / apps** | [Open_route](https://github.com/Super-cod/Open_route) · [dynamic-island](https://github.com/Super-cod/dynamic-island) · [TrackTempML-Live-Weather-Forecast](https://github.com/Super-cod/TrackTempML-Live-Weather-Forecast) |
+| **Deep learning / vision** | [Swin-Transformers](https://github.com/Super-cod/Swin-Transformers) · [VISiOn_transformer](https://github.com/Super-cod/VISiOn_transformer) · [PLANT_DISEASE_BASED_DL_MODEL](https://github.com/Super-cod/PLANT_DISEASE_BASED_DL_MODEL) · [posture_detection_system_ai_project](https://github.com/Super-cod/posture_detection_system_ai_project) · [Drone_tarcking](https://github.com/Super-cod/Drone_tarcking) (YOLOv8) · [HCI_gaze](https://github.com/Super-cod/HCI_gaze) (gaze-motor stroke-rehab assessment prototype) |
+| **Applied ML** | [customer-churn](https://github.com/Super-cod/customer-churn) · [Fraud_Bockchain_transaction](https://github.com/Super-cod/Fraud_Bockchain_transaction) (permissioned blockchain + fraud engine) · [car_price_ml_model](https://github.com/Super-cod/car_price_ml_model) · [Heart_guard](https://github.com/Super-cod/Heart_guard) · [reinforsment_snake_game](https://github.com/Super-cod/reinforsment_snake_game) |
+| **Full-stack / apps** | [SuperJoin](https://github.com/Super-cod/SuperJoin) (evidence-grounded fact extraction over PDFs) · [dynamic-island](https://github.com/Super-cod/dynamic-island) · [TrackTempML-Live-Weather-Forecast](https://github.com/Super-cod/TrackTempML-Live-Weather-Forecast) |
 
 ---
 
