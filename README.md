@@ -62,7 +62,7 @@ Small, dependency-free C++20 labs with measured results:
 | Area | Projects |
 | :--- | :--- |
 | **Deep learning / vision** | [Swin-Transformers](https://github.com/Super-cod/Swin-Transformers) · [VISiOn_transformer](https://github.com/Super-cod/VISiOn_transformer) · [PLANT_DISEASE_BASED_DL_MODEL](https://github.com/Super-cod/PLANT_DISEASE_BASED_DL_MODEL) · [posture_detection_system_ai_project](https://github.com/Super-cod/posture_detection_system_ai_project) · [Drone_tracking](https://github.com/Super-cod/Drone_tracking) (YOLOv8) · [HCI_gaze](https://github.com/Super-cod/HCI_gaze) (gaze-motor stroke-rehab assessment prototype) |
-| **Applied ML** | [customer-churn](https://github.com/Super-cod/customer-churn) · [Fraud_Blockchain_transaction](https://github.com/Super-cod/Fraud_Blockchain_transaction) (permissioned blockchain + fraud engine) · [car_price_ml_model](https://github.com/Super-cod/car_price_ml_model) · [Heart_guard](https://github.com/Super-cod/Heart_guard) · [reinforcement_snake_game](https://github.com/Super-cod/reinforcement_snake_game) |
+| **Applied ML** | [Fraud_Blockchain_transaction](https://github.com/Super-cod/Fraud_Blockchain_transaction) (permissioned blockchain + fraud engine) · [Heart_guard](https://github.com/Super-cod/Heart_guard) · [reinforcement_snake_game](https://github.com/Super-cod/reinforcement_snake_game) |
 | **Full-stack / apps** | [SuperJoin](https://github.com/Super-cod/SuperJoin) (evidence-grounded fact extraction over PDFs) · [dynamic-island](https://github.com/Super-cod/dynamic-island) · [TrackTempML-Live-Weather-Forecast](https://github.com/Super-cod/TrackTempML-Live-Weather-Forecast) |
 
 ---
