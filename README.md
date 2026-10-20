@@ -1,137 +1,78 @@
-# Swayam Kapoor
+# Hi, I'm Swayam Kapoor 👋
 
-**Systems & Compiler Software Engineer** | C++20 • Compilers & IR • GPU Architecture & PTX • Multimodal AI
+**Systems · Compilers · GPU Computing · Machine Learning**
 
-[![GitHub Profile](https://img.shields.io/badge/GitHub-Super--cod-181717?style=flat&logo=github)](https://github.com/Super-cod)
-[![Target Role](https://img.shields.io/badge/Focus-NVIDIA%20PTX%20Compiler%20%2F%20GPU%20Systems-76B900?style=flat&logo=nvidia)](https://github.com/Super-cod)
-[![Silicon Verified](https://img.shields.io/badge/Verified%20On-NVIDIA%20RTX%203050%20(Ampere)-76B900?style=flat&logo=nvidia)](https://github.com/Super-cod)
+I build things close to the metal and close to the model: a compiler that emits NVIDIA PTX, hand-written GPU kernels profiled on real hardware, and transformers and vision-language models implemented from scratch in PyTorch.
 
----
+[![GitHub](https://img.shields.io/badge/GitHub-Super--cod-181717?style=flat&logo=github)](https://github.com/Super-cod)
+[![Email](https://img.shields.io/badge/Email-swayamk139%40gmail.com-D14836?style=flat&logo=gmail&logoColor=white)](mailto:swayamk139@gmail.com)
 
-## Technical Focus
-
-Systems and compiler engineer specializing in **C++20 compiler frontends, 3AC intermediate representations, dataflow optimization passes, direct GPU programming via the NVIDIA PTX virtual ISA & Driver API, low-level microarchitecture & memory hierarchies, and from-scratch multimodal AI architectures**.
-
-```
-       ┌─────────────────────────────────────────────────────────────┐
-       │                  Source Code (C++ / DSL)                    │
-       └──────────────────────────────┬──────────────────────────────┘
-                                      │
-                      [ Lexer -> Parser -> AST -> Typecheck ]
-                                      │
-       ┌─────────────────────────────────────────────────────────────┐
-       │               Intermediate Representation (IR)              │
-       │  - 3-Address Code / Basic Blocks / Control Flow Graphs       │
-       │  - Optimization Passes: Constant Folding, DCE, Algebraic    │
-       └──────────────────────────────┬──────────────────────────────┘
-                                      │
-               ┌──────────────────────┴──────────────────────┐
-               │                                             │
-   [ Target: PTX Virtual ISA ]                  [ Target: Machine Code / Relocatables ]
-   Direct nvcuda.dll JIT Driver                 Linkers, Relocations (PC-Rel Disp)
-   Shared Memory Tiling & Coalescing            ELF64 / PE-COFF Binary Inspection
-   Ampere SM 8.6 Hardware Silicon               CPUID, SIMD AVX2, Cache Line Padding
-```
+Open to internships and entry-level roles in systems, compilers, GPU and ML engineering.
 
 ---
 
-## Top 3 Featured Repositories (Pinned Showcase)
+## Featured projects
 
-### 1. [ptx-toy-compiler](https://github.com/Super-cod/ptx-toy-compiler) — Modern C++20 Compiler & PTX Target
-> **C++20 • Recursive Descent • 3AC IR • Constant Folding & DCE • PTX ISA Emitter • StackVM**
-* **Frontend**: Hand-crafted recursive descent parser, lexical tokenizer with source location tracking, strongly-typed AST hierarchy, and symbol table with lexical scoping.
-* **Intermediate Representation (IR)**: Linear three-address code (3AC) with virtual register allocation, basic block construction, and control-flow graphs.
-* **Optimization Engine**: Iterative fixed-point dataflow optimization passes (constant folding, constant propagation, algebraic identity simplification, and dead code elimination).
-* **Dual Backends**:
-  1. Clean **PTX (Parallel Thread Execution) Emitter** generating valid NVIDIA virtual assembly (`.version 7.0`, `.target sm_75`, parameter registers, and predicated branches `@!%p0`). Emitted PTX verified to assemble and execute directly on NVIDIA silicon via `nvcuda.dll` `cuModuleLoadData`.
-  2. In-memory **Stack Virtual Machine** bytecode interpreter for immediate test verification without requiring an external GPU driver.
-* **Testing**: 12 automated unit and integration tests passing (`./build/ptxcc_tests`).
+### [ptx-toy-compiler](https://github.com/Super-cod/ptx-toy-compiler)
+`C++20` `Compilers` `IR` `PTX`
 
----
+An educational compiler written in modern C++: recursive-descent parser, typed AST, three-address-code IR, optimization passes (constant folding, dead code elimination) and a backend that generates NVIDIA PTX.
 
-### 2. [cuda-kernel-perf-lab](https://github.com/Super-cod/cuda-kernel-perf-lab) — Direct PTX GPU Computing & Driver API
-> **NVIDIA PTX Virtual ISA • Driver API (nvcuda.dll) • Shared Memory Tiling • Memory Coalescing • Warp Divergence**
-* Direct interaction with NVIDIA GPU silicon (**GeForce RTX 3050 Laptop GPU, Ampere SM 8.6**) bypassing high-level CUDA runtime wrappers via raw PTX assembly JIT compilation:
-  * **Shared Memory Tiling (GEMM)**: $16 \times 16$ SRAM tiles with `bar.sync 0` barriers, reducing global DRAM traffic by 16x and delivering **486 GFLOPS** (1.40x faster than naive DRAM streaming).
-  * **Memory Coalescing**: Compares uncoalesced strided memory access against 128-bit vectorized `ld.global.v4.f32` transactions, achieving **175.14 GB/s throughput** (saturating 91% of the 128-bit GDDR6 memory bus).
-  * **Warp Divergence**: Quantifies SIMT execution serialization penalty on divergent branches (**1.92x latency penalty** for divergent warps, matching theoretical 2x limit).
-  * **Numerical Precision**: Verified against CPU reference calculations with floating-point tolerance ($\Delta < 10^{-5}$).
-* Verified on physical NVIDIA RTX 3050 GPU via automated test runner (`.\run_experiments.ps1`).
+### [cuda-kernel-perf-lab](https://github.com/Super-cod/cuda-kernel-perf-lab)
+`PTX` `CUDA Driver API` `Python` `GPU performance`
 
----
+Hand-written PTX kernels loaded through the CUDA Driver API and measured on an RTX 3050 laptop GPU. Covers memory coalescing, shared-memory tiling for GEMM and warp divergence, with results checked against CPU references.
 
-### 3. [Multimodal-Vision-Language-Model-from-scratch](https://github.com/Super-cod/-Multimodal-Vision-Language-Model-from-scratch-in-PyTorch) — Vision-Language Model (VLM) Architecture
-> **Vision Transformer (ViT) • Cross-Modal Linear Projector • Sequence Binding • Causal Language Decoder**
-* End-to-end multimodal autoregressive architecture inspired by modern architectures (PaliGemma / LLaVA):
-  * **Vision Encoder**: 2D Convolutional patch projection (16x16 patches, $N=196$), prepended learnable `[CLS]` token (197 tokens total), and stacked Pre-LN transformer encoder layers.
-  * **Cross-Modal Projector**: Linear bottleneck projecting visual representations from latent vision space ($\mathbb{R}^{768}$) into textual representation space ($\mathbb{R}^{2048}$).
-  * **Sequence Binding Engine**: Dynamic token sequence interleaving binding visual tokens into the text stream at designated `<image>` anchor positions.
-  * **Causal Language Decoder**: Autoregressive decoding with Nucleus (Top-$p$) sampling.
-  * Automated verification suite validating tensor shape contracts and end-to-end backpropagation gradients across all three sub-networks.
-* Verified via automated shape and gradient flow test suite (`.\run_tests.ps1`).
+### [Multimodal Vision-Language Model from scratch](https://github.com/Super-cod/-Multimodal-Vision-Language-Model-from-scratch-in-PyTorch)
+`PyTorch` `ViT` `Multimodal`
+
+A PaliGemma/LLaVA-style VLM built without high-level model wrappers: ViT patch encoder, cross-modal projector and a causal decoder, with shape and gradient-flow tests.
+
+### [Building_transformer_PyTorch](https://github.com/Super-cod/Building_transformer_PyTorch)
+`PyTorch` `Transformers` `KV-cache`
+
+A decoder-only transformer with a stateful KV-cache for fast autoregressive inference, plus tests for causal-mask correctness and cache equivalence.
+
+### [PJT-Deep-Learning-Based-Real-Time-Multi-Camera](https://github.com/Super-cod/PJT-Deep-Learning-Based-Real-Time-Multi-Camera)
+`Python` `FastAPI` `Swift / ARKit` `Computer vision`
+
+Real-time multi-camera human localization: iPhones track people in 3D with ARKit and LiDAR, and a Python hub fuses them into one shared world frame for a live 3D web view.
+
+### [ai-code-reviewer](https://github.com/Super-cod/ai-code-reviewer)
+`FastAPI` `SQLAlchemy` `Gemini API` `GitHub OAuth`
+
+A web app that pulls a GitHub pull request, indexes the code and produces a structured AI review (bugs, security, performance) that can be posted back as a PR comment.
 
 ---
 
-## Supporting Systems & Architecture Laboratories
+## More work
 
-### 4. [Building_transformer_PyTorch](https://github.com/Super-cod/Building_transformer_PyTorch) — Transformer Decoder & Stateful KV-Cache
-> **Autoregressive Inference • Stateful KV-Caching • Pre-LayerNorm • Causal Masking Invariance • RTX 3050 Benchmark**
-* Clean implementation of the autoregressive Transformer Decoder architecture.
-* Stateful Key-Value (KV) cache reducing generation complexity from $O(N^2)$ quadratic to $O(N)$ linear time.
-* **Empirical GPU Benchmark (RTX 3050)**: KV-cache decoding achieves **196.0 tokens/sec** vs. **125.0 tokens/sec** for full-context recomputation (**1.57x throughput increase**).
-* Automated verification of causal mask invariance ($\Delta = 0.000$) and KV-cache numerical equivalence ($\Delta < 4.77 \times 10^{-6}$).
-
-### 5. [cpp-arch-perf-lab](https://github.com/Super-cod/cpp-arch-perf-lab) — Machine Architecture & Memory Hierarchy Lab
-> **C++20 • CPUID Introspection • Cache Locality • Struct Padding • False Sharing • AVX2 SIMD**
-* Empirical microbenchmark suite measuring hardware interactions with C++ systems:
-  * **Spatial Cache Locality**: Measures a **7.39x throughput advantage** (5.56 GB/s Row-Major vs. 0.75 GB/s Column-Major) due to hardware cache line prefetching.
-  * **Struct Alignment & Padding**: Demonstrates struct size reduction from 40 bytes to 24 bytes by sorting fields by alignment requirements (`offsetof` analysis, 40% memory reduction).
-  * **False Sharing Elimination**: Eliminates multi-core MESI/MOESI bus invalidation ping-pong using `alignas(64)` cache line padding (**1.25x speedup**).
-  * **Branch Prediction & CMOV**: Benchmarks branchless conditional moves against data-dependent branch mispredictions.
-  * **Compiler Vectorization**: Analyzes auto-vectorization across scalar fallback vs. 256-bit AVX2 vector SIMD instructions.
-
-### 6. [toolchain-linker-lab](https://github.com/Super-cod/toolchain-linker-lab) — Translation Units, Linking & ABI Laboratory
-> **C++ Toolchains • Object Linking • Symbol Resolution • Name Mangling • Relocation Patching • DWARF**
-* Hands-on laboratory dissecting the five core stages of native compilation and linking:
-  * **Module 1 (Preprocessor & Translation Units)**: Header guards vs. `#pragma once`, macro token pasting, include order side-effects.
-  * **Module 2 (Name Mangling & C++ ABI)**: Itanium C++ ABI type-encoding (`_Z3addii`), namespace mangling, and `extern "C"` linkage boundaries.
-  * **Module 3 (Weak Symbols vs. ODR Violations)**: Strong vs. weak symbol overriding (`__attribute__((weak))`), multiple definition errors, and template deduplication.
-  * **Module 4 (Relocations Inspection & Patching)**: Proves PC-relative displacement calculation ($\text{Displacement} = \text{Target} - (\text{CallAddr} + 5)$), replacing dummy object placeholders (`e8 00 00 00 00` $\to$ `e8 9f 00 00 00`).
-  * **Module 5 (Debug Symbols & DWARF)**: Measures `-O2 -g` vs. `-O2 -s` binaries, proving DWARF `.debug_*` sections consume 90% disk footprint with zero runtime CPU overhead.
-
-### 7. [bin-symbol-explorer](https://github.com/Super-cod/bin-symbol-explorer) — Binary Format & Symbol Table Inspector
-> **Modern C++ • ELF64 & PE/COFF • Object Files • Relocation Records • Symbol Resolution**
-* Structural parser and inspector for binary object files (`.o`, `.obj`) and relocatable executables.
-* Inspects ELF64 headers, section header tables (`.text`, `.data`, `.bss`, `.rodata`), symbol tables (`.symtab`, `.strtab`), and relocation entries (`.rel`, `.rela`).
-* Provides cross-platform structural parsing for Windows PE/COFF headers, sections, and export tables.
-* Diagnoses symbol binding attributes (`STB_LOCAL`, `STB_GLOBAL`, `STB_WEAK`), symbol types (`STT_FUNC`, `STT_OBJECT`), and unreferenced externals.
-
----
-
-## Skills & Core Competencies Matrix
-
-| Engineering Discipline | Concrete Competencies & Technologies |
+| Area | Projects |
 | :--- | :--- |
-| **C++ Systems Programming** | **C++20**, modern RAII, rule of 5, move semantics, memory model, custom allocators, templates, cache line alignment (`alignas`), bit manipulation, zero-overhead abstractions |
-| **Compiler Engineering** | Lexical analysis, recursive descent parsing, AST construction, symbol tables, lexical scoping, 3-Address Code (3AC) linear IR, SSA principles, Constant Folding, Constant Propagation, Dead Code Elimination (DCE), Code Generation |
-| **PTX & GPU Computing** | **PTX Virtual ISA** (`.version 7.0`, `.target sm_75`), NVIDIA Driver API (`nvcuda.dll`), shared memory SRAM tiling (`bar.sync`), memory coalescing (128-byte transactions, `ld.global.v4.f32`), warp divergence serialization, thread block grid scheduling |
-| **Binary Formats & Linkers** | **ELF64 & PE/COFF** parsing, section headers (`.text`, `.data`, `.bss`, `.rodata`), symbol binding (`STB_LOCAL`, `STB_GLOBAL`, `STB_WEAK`), relocation types, PC-relative displacement patching, Itanium C++ ABI mangling, DWARF debug symbols |
-| **Computer Architecture** | CPUID instruction queries, L1/L2/L3 cache hierarchies, spatial/temporal cache locality, struct member alignment & padding, multi-core false sharing (MESI/MOESI invalidation), branch prediction & CMOV, AVX2 SIMD vectorization |
-| **AI Systems & Inference** | Multi-Head Attention mechanisms, autoregressive decoding, stateful Key-Value (KV) caching, Vision Transformer (ViT) patch embedding, cross-modal linear projection, nucleus (top-$p$) sampling |
-| **Toolchains & Testing** | GCC 14, Clang, MinGW-w64, CMake, Ninja, GNU Binutils (`readelf`, `objdump`, `nm`, `c++filt`), GDB, Python `ctypes`, PyTorch, PowerShell test automation |
+| **Deep learning / vision** | [Swin-Transformers](https://github.com/Super-cod/Swin-Transformers) · [VISiOn_transformer](https://github.com/Super-cod/VISiOn_transformer) · [PLANT_DISEASE_BASED_DL_MODEL](https://github.com/Super-cod/PLANT_DISEASE_BASED_DL_MODEL) · [posture_detection_system_ai_project](https://github.com/Super-cod/posture_detection_system_ai_project) · [Drone_tarcking](https://github.com/Super-cod/Drone_tarcking) · [HCI_gaze](https://github.com/Super-cod/HCI_gaze) |
+| **Applied ML** | [customer-churn](https://github.com/Super-cod/customer-churn) · [Fraud_Bockchain_transaction](https://github.com/Super-cod/Fraud_Bockchain_transaction) · [car_price_ml_model](https://github.com/Super-cod/car_price_ml_model) · [Heart_guard](https://github.com/Super-cod/Heart_guard) · [reinforsment_snake_game](https://github.com/Super-cod/reinforsment_snake_game) |
+| **Full-stack / apps** | [Open_route](https://github.com/Super-cod/Open_route) · [dynamic-island](https://github.com/Super-cod/dynamic-island) · [TrackTempML-Live-Weather-Forecast](https://github.com/Super-cod/TrackTempML-Live-Weather-Forecast) |
 
 ---
 
-## Verification & Build Philosophy
+## Tech stack
 
-All featured repositories adhere to rigorous software engineering practices:
-* **Zero Dependency Bloat**: Core systems and compiler modules are implemented in pure, modern C++ without bulky external frameworks.
-* **Deterministic Test Automation**: Every project includes automated test scripts runnable in a single command, verifying mathematical invariants and error bounds.
-* **Hardware-Grounded Empirical Metrics**: Performance claims are backed by reproducible benchmarks executed directly on physical silicon (Intel Core i7-12650H CPU and NVIDIA GeForce RTX 3050 Laptop GPU).
+![C++](https://img.shields.io/badge/C++-00599C?style=flat&logo=cplusplus&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=pytorch&logoColor=white)
+![CUDA](https://img.shields.io/badge/CUDA%20%2F%20PTX-76B900?style=flat&logo=nvidia&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white)
+![C#](https://img.shields.io/badge/C%23-512BD4?style=flat&logo=dotnet&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
+
+- **Systems & compilers:** C++20, lexing/parsing, IR design, optimization passes, code generation
+- **GPU:** PTX, CUDA Driver API, memory hierarchy, kernel benchmarking
+- **ML:** PyTorch, transformers, ViT, multimodal models, computer vision, scikit-learn
+- **Backend & tooling:** FastAPI, SQLAlchemy, REST, WebSockets, CMake, PowerShell
 
 ---
 
-## Contact & Links
+## Get in touch
 
-* **GitHub**: [@Super-cod](https://github.com/Super-cod)
-* **Target Position**: NVIDIA Software Intern — PTX Compiler team
+📫 [swayamk139@gmail.com](mailto:swayamk139@gmail.com) · 💻 [github.com/Super-cod](https://github.com/Super-cod)
